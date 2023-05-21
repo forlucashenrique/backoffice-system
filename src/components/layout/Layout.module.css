@@ -1,0 +1,22 @@
+.layoutWrapper {
+    width: 100%;
+    height: 100%;
+    color: black;
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.contentWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+
+}

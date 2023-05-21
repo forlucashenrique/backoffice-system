@@ -1,0 +1,41 @@
+.tableWrapper {
+    width: 65%;
+    margin: 0 auto;
+    font-size: 2rem;
+    border-collapse: collapse;
+}
+
+.tableWrapper tbody tr:nth-child(even) {
+    background-color: #eee;
+}
+
+
+
+th {
+    border-bottom: 1px solid #ddd;
+    
+}
+
+th, tr, td {
+    padding: 1rem;
+    text-align: start;
+    
+}
+
+td a {
+    width: 100%;
+}
+
+td:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    gap: 10px;
+
+}
+
+
+
+

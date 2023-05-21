@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "projectName": "project 10",
+      "projectImageUrl": "https://localhost.com",
+      "id": 4
+    },
+    {
+      "projectName": "project 2",
+      "projectImageUrl": "lfdlskflskdfsdf",
+      "id": 5
+    },
+    {
+      "projectName": "legal",
+      "projectImageUrl": "bora ????",
+      "id": 6
+    },
+    {
+      "projectName": "snow ",
+      "projectImageUrl": "gato doido",
+      "id": 8
+    }
+  ], 
+
+  "users": [
+    {
+      "name": "Lucas Henrique",
+      "email": "lucas@gmail.com",
+      "password": "123456"
+    }
+  ]
+}
