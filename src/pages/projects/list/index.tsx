@@ -12,7 +12,7 @@ export const ListProjects = () => {
     const removeProject = async (id: number) => {
 
         try {
-            await api.delete(`http://localhost:3000/projects/${id}`)
+            await api.delete(`projects/${id}`)
             setProjects(projects.filter(project => project.id !== id))
         } catch (error) {
             console.log(error);
@@ -22,7 +22,7 @@ export const ListProjects = () => {
     useEffect(() => {
 
         const getProjects = async () => {
-            const response = await api.get('http://localhost:3000/projects')
+            const response = await api.get('projects')
             setProjects(response.data)
         }
 

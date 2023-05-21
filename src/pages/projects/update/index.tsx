@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import { Form } from "../../../components/shared/form"
 import { useEffect, useState } from "react";
 import { Project } from "../../../types/Projects";
-import axios from "axios";
+import api from "../../../services/api";
 
 export const UpdateProject = () => {
 
@@ -15,7 +15,7 @@ export const UpdateProject = () => {
         const getProject = async () => {
 
             try {
-                const response = await axios.get(`http://localhost:3000/projects/${id}`);
+                const response = await api.get(`projects/${id}`);
                 const data = response.data
                 setProject(data);
             } catch (error) {

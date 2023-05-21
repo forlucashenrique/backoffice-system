@@ -49,9 +49,9 @@ export const Form = ({ project }: FormProps) => {
         setShowMessage(true);
         try {
             if (project) {
-                await api.patch(`http://localhost:3000/projects/${project.id}`, values)
+                await api.patch(`projects/${project.id}`, values)
             } else {
-                await api.post('http://localhost:3000/projects', values)
+                await api.post('projects', values)
                 resetForm();
             }
 
@@ -83,7 +83,7 @@ export const Form = ({ project }: FormProps) => {
             }) => (
                 <>
                     <div>
-                        {showMessage && <Message text={message} />}
+                        {showMessage && <Message text={message} typeError="success"/>}
                     </div>
                     <form
                         className={styles.formWrapper}

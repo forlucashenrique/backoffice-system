@@ -9,7 +9,7 @@ interface MessageProps {
 export function Message({ text, typeError }: MessageProps) {
 
     return (
-        <span className={typeError === 'sucess' ? styles.sucess : styles.error }>
+        <span className={typeError === 'success' ? styles.sucess : styles.error }>
             {text}
         </span>
     )

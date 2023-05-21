@@ -1,7 +1,7 @@
 import App from '../App'
 import { createBrowserRouter } from 'react-router-dom'
-import { CreateProject, Home, ListProjects } from '../pages'
-import { UpdateProject } from '../pages/projects/update'
+import { CreateProject, Home, ListProjects, UpdateProject } from '../pages'
+
 import { Login } from '../pages/login'
 
 
@@ -34,7 +34,9 @@ export const router = createBrowserRouter([
     },
     {
       path: '/login',
-      element: <Login />
+      element: <Login />,
+      
+
     },
 
     {

@@ -1,10 +1,20 @@
 
 import './App.css'
-import { Outlet } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router-dom'
 import { Layout } from './components/layout'
+import { useAuth } from './contexts/AuthContext';
 
 function App() {
+
+  const {authenticated} = useAuth();
+
   
+  if(!authenticated) {
+    return (
+      <Navigate to="/login" />
+    )
+  }
+
   return (
     <Layout>
       <Outlet />
