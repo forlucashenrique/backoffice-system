@@ -9,7 +9,7 @@ export const ListProjects = () => {
     const [projects, setProjects] = useState<Project[]>([])
 
 
-    const removeProject = async (id: number) => {
+    const removeProject = async (id: number | undefined) => {
 
         try {
             await api.delete(`projects/${id}`)
