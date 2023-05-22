@@ -5,7 +5,7 @@ import styles from './TableProjects.module.css'
 
 interface TableProjectsProps {
     projects: Project[]
-    handleRemove: (id: number) => void;
+    handleRemove: (id: number | undefined) => void;
 }
 
 
