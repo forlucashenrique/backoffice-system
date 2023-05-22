@@ -13,7 +13,7 @@ import api from "../../../services/api";
 
 
 interface FormProps {
-    project: Project,
+    project?: Project,
 }
 
 
@@ -38,6 +38,7 @@ export const Form = ({ project }: FormProps) => {
 
 
     const defaultValues: InitialValuesForm = {
+        
         projectName: '',
         projectImageUrl: ''
     }
