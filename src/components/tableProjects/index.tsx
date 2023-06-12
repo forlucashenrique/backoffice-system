@@ -26,8 +26,8 @@ export const TableProjects = ({ projects, handleRemove }: TableProjectsProps) =>
                         <tr
                             key={project.id}
                         >
-                            <td>{project.projectName}</td>
-                            <td>{project.projectImageUrl}</td>
+                            <td>{project.project_name}</td>
+                            <td>{project.project_image_url}</td>
                             <td>
                                 <Link to={`/projects/update/${project.id}`}>
                                     <Button

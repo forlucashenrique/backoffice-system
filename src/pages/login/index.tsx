@@ -28,10 +28,8 @@ export const Login = () => {
 
         try {
             const user = await loginService(values);
-            console.log(user);
             login(user);
             navigate('/');
-            console.log(localStorage);
         } catch (error) {
             console.log(error);
         }

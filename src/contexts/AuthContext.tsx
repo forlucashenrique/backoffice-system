@@ -16,7 +16,10 @@ const AuthContext = createContext<AuthContextProps>({} as AuthContextProps);
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }: {children: any}) => {
-    const [authenticated, setAuthenticated] = useState(false);
+
+    const currentAuthenticated = localStorage.getItem("authenticated");
+
+    const [authenticated, setAuthenticated] = useState(currentAuthenticated ? JSON.parse(currentAuthenticated) : false);
     const [user, setUser] = useState<User | null>(null);
     const [isLoading, setLoading] = useState(true);
 
@@ -35,6 +38,8 @@ export const AuthProvider = ({ children }: {children: any}) => {
         setAuthenticated(true);
         setUser(loggedInUser);
         localStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("authenticated", JSON.stringify(authenticated));
+        console.log(localStorage);
     }
 
     const logout = () => {

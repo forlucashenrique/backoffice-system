@@ -23,7 +23,8 @@ export const ListProjects = () => {
 
         const getProjects = async () => {
             const response = await api.get('projects')
-            setProjects(response.data)
+           
+            setProjects(response.data.results)
         }
 
         getProjects();;

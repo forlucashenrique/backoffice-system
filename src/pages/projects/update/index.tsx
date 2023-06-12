@@ -16,7 +16,8 @@ export const UpdateProject = () => {
 
             try {
                 const response = await api.get(`projects/${id}`);
-                const data = response.data
+                const data = response.data.results[0]
+                
                 setProject(data);
             } catch (error) {
                 console.log(error);

@@ -18,8 +18,8 @@ interface FormProps {
 
 
 const validateSchema = Yup.object().shape({
-    projectName: Yup.string().required('O nome do projeto é obrigatório.'),
-    projectImageUrl: Yup.string().required('A URL da imagem é obrigatória.')
+    project_name: Yup.string().required('O nome do projeto é obrigatório.'),
+    project_image_url: Yup.string().required('A URL da imagem é obrigatória.')
 })
 
 
@@ -39,8 +39,8 @@ export const Form = ({ project }: FormProps) => {
 
     const defaultValues: InitialValuesForm = {
         
-        projectName: '',
-        projectImageUrl: ''
+        project_name: '',
+        project_image_url: ''
     }
 
 
@@ -50,7 +50,7 @@ export const Form = ({ project }: FormProps) => {
         setShowMessage(true);
         try {
             if (project) {
-                await api.patch(`projects/${project.id}`, values)
+                await api.put(`projects/${project.id}`, values)
             } else {
                 await api.post('projects', values)
                 resetForm();
@@ -95,12 +95,12 @@ export const Form = ({ project }: FormProps) => {
                             <Input
                                 type="text"
                                 placeholder="Project name"
-                                value={values.projectName}
+                                value={values.project_name}
                                 onChange={handleChange}
-                                name="projectName"
-                                className={touched.projectName && errors.projectName ? styles.error : ''}
+                                name="project_name"
+                                className={touched.project_name && errors.project_name ? styles.error : ''}
                             />
-                            <Message text={errors.projectName} />
+                            <Message text={errors.project_name} />
                         </div>
                         <div className={styles.fieldWrapper}>
                             <label>Image URL</label>
@@ -108,12 +108,12 @@ export const Form = ({ project }: FormProps) => {
                                 type="text"
                                 placeholder="Image URL"
                                 onChange={handleChange}
-                                value={values.projectImageUrl}
-                                name="projectImageUrl"
-                                className={errors.projectImageUrl ? styles.error : ''}
+                                value={values.project_image_url}
+                                name="project_image_url"
+                                className={errors.project_image_url ? styles.error : ''}
                                 
                             />
-                            <Message text={errors.projectImageUrl} 
+                            <Message text={errors.project_image_url} 
                             />
                         </div>
                         <Button
